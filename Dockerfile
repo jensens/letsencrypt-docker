@@ -23,5 +23,7 @@ RUN pip3 install -U pip chaperone \
 COPY renew.sh /
 COPY chaperone.yaml /etc/chaperone.d/chaperone.yaml
 VOLUME /etc/letsencrypt
+RUN mkdir -p /var/www/letsencrypt
+VOLUME /var/www/letsencrypt
 
 ENTRYPOINT ["/usr/local/bin/chaperone"]
