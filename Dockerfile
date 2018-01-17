@@ -23,7 +23,7 @@ COPY renew.sh /
 COPY chaperone.yaml /etc/chaperone.d/chaperone.yaml
 
 RUN chown -R runapps /etc/letsencrypt \
-    && mkdir -p /var/www/letsencrypt
+    && mkdir -p /var/www/letsencrypt \
     && chown -R runapps /var/www/letsencrypt \
     && mkdir -p /var/log/letsencrypt \
     && chown -R runapps /var/log/letsencrypt
