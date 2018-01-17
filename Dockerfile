@@ -22,16 +22,17 @@ RUN pip3 install -U pip chaperone \
 COPY renew.sh /
 COPY chaperone.yaml /etc/chaperone.d/chaperone.yaml
 
-VOLUME /etc/letsencrypt
-VOLUME /var/www/letsencrypt
 
 RUN chown -R runapps /etc/letsencrypt \
+    && mkdir -p /var/www/letsencrypt \
     && chown -R runapps /var/www/letsencrypt \
     && mkdir -p /var/log/letsencrypt \
     && chown -R runapps /var/log/letsencrypt
 
-
 USER runapps
+
+VOLUME /etc/letsencrypt
+VOLUME /var/www/letsencrypt
 
 ENTRYPOINT ["/usr/local/bin/chaperone"]
 
