@@ -1,2 +1,2 @@
 #!/bin/sh
-/bin/certbot-auto renew --webroot-path /var/www/letsencrypt --quiet --no-self-upgrade
+/usr/bin/certbot renew --webroot-path /var/www/letsencrypt --quiet --no-self-upgrade
