@@ -26,6 +26,7 @@ VOLUME /etc/letsencrypt
 RUN chown -R runapps /etc/letsencrypt
 RUN mkdir -p /var/www/letsencrypt
 RUN chown -R runapps /var/www/letsencrypt
+RUN mkdir -p /var/log/letsencrypt
 RUN chown -R runapps /var/log/letsencrypt
 VOLUME /var/www/letsencrypt
 ENTRYPOINT ["/usr/local/bin/chaperone"]
