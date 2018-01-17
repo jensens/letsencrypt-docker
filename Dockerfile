@@ -1,6 +1,8 @@
 FROM ubuntu:16.04
 
 MAINTAINER "BlueDynamics Alliance" http://bluedynamics.com
+LABEL name="letsencrypt renew" \
+      description="Letsencrypt, running twice a day a renew of the certs." \
 
 RUN apt-get update \
     && apt-get -y upgrade  \
