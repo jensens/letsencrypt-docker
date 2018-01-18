@@ -27,7 +27,9 @@ RUN chown -R runapps /etc/letsencrypt \
     && mkdir -p /var/www/letsencrypt \
     && chown -R runapps /var/www/letsencrypt \
     && mkdir -p /var/log/letsencrypt \
-    && chown -R runapps /var/log/letsencrypt
+    && chown -R runapps /var/log/letsencrypt \
+    && mkdir -p /var/lib/letsencrypt \
+    && chown -R runapps /var/lib/letsencrypt
 
 USER runapps
 
